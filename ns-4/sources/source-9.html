@@ -1,0 +1,199 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > SmartWatchServiceImpl</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.example.demo.service</a>
+</div>
+
+<h1>Coverage Summary for Class: SmartWatchServiceImpl (com.example.demo.service)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">SmartWatchServiceImpl</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/9)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/40)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.example.demo.service;
+<i class="no-highlight">2</i>&nbsp;
+<i class="no-highlight">3</i>&nbsp;import com.example.demo.domain.SmartWatch;
+<i class="no-highlight">4</i>&nbsp;import com.example.demo.domain.pieces.Battery;
+<i class="no-highlight">5</i>&nbsp;import com.example.demo.domain.pieces.CPU;
+<i class="no-highlight">6</i>&nbsp;import com.example.demo.domain.pieces.HealthMonitor;
+<i class="no-highlight">7</i>&nbsp;import com.example.demo.domain.pieces.RAM;
+<i class="no-highlight">8</i>&nbsp;
+<i class="no-highlight">9</i>&nbsp;import java.util.*;
+<i class="no-highlight">10</i>&nbsp;
+<i class="no-highlight">11</i>&nbsp;public class SmartWatchServiceImpl implements SmartWatchService{
+<i class="no-highlight">12</i>&nbsp;
+<i class="no-highlight">13</i>&nbsp;	/**
+<i class="no-highlight">14</i>&nbsp;	 * Emulates a database with java hashmap
+<i class="no-highlight">15</i>&nbsp;	 */
+<b class="nc"><i class="no-highlight">16</i>&nbsp;    private final Map&lt;Long, SmartWatch&gt; smartwatches = new HashMap&lt;&gt;();</b>
+<i class="no-highlight">17</i>&nbsp;
+<i class="no-highlight">18</i>&nbsp;    
+<b class="nc"><i class="no-highlight">19</i>&nbsp;    public SmartWatchServiceImpl() {</b>
+<i class="no-highlight">20</i>&nbsp;    	// demo data
+<b class="nc"><i class="no-highlight">21</i>&nbsp;		SmartWatch watch1 = new SmartWatch(1L, &quot;Fitbit sense&quot;, </b>
+<b class="nc"><i class="no-highlight">22</i>&nbsp;				new RAM(1L, &quot;DDR4&quot;, 2),</b>
+<b class="nc"><i class="no-highlight">23</i>&nbsp;				new Battery(1L, 4500.0),</b>
+<b class="nc"><i class="no-highlight">24</i>&nbsp;				new CPU(1L, 4),</b>
+<b class="nc"><i class="no-highlight">25</i>&nbsp;				true,</b>
+<b class="nc"><i class="no-highlight">26</i>&nbsp;				new HealthMonitor(1L, 0.0, 0));</b>
+<i class="no-highlight">27</i>&nbsp;		
+<b class="nc"><i class="no-highlight">28</i>&nbsp;		SmartWatch watch2 = new SmartWatch(2L, &quot;Ticwatch&quot;, </b>
+<b class="nc"><i class="no-highlight">29</i>&nbsp;				new RAM(2L, &quot;DDR3&quot;, 4),</b>
+<b class="nc"><i class="no-highlight">30</i>&nbsp;				new Battery(2L, 4500.0),</b>
+<b class="nc"><i class="no-highlight">31</i>&nbsp;				new CPU(2L, 4),</b>
+<b class="nc"><i class="no-highlight">32</i>&nbsp;				true,</b>
+<b class="nc"><i class="no-highlight">33</i>&nbsp;				new HealthMonitor(2L, 0.0, 0));</b>
+<i class="no-highlight">34</i>&nbsp;		
+<b class="nc"><i class="no-highlight">35</i>&nbsp;		SmartWatch watch3 = new SmartWatch(1L, &quot;Samsung Galaxy Watch&quot;, </b>
+<b class="nc"><i class="no-highlight">36</i>&nbsp;				new RAM(3L, &quot;DDR4&quot;, 2),</b>
+<b class="nc"><i class="no-highlight">37</i>&nbsp;				new Battery(3L, 4500.0),</b>
+<b class="nc"><i class="no-highlight">38</i>&nbsp;				new CPU(3L, 4),</b>
+<b class="nc"><i class="no-highlight">39</i>&nbsp;				true,</b>
+<b class="nc"><i class="no-highlight">40</i>&nbsp;				new HealthMonitor(3L, 0.0, 0));</b>
+<i class="no-highlight">41</i>&nbsp;		
+<i class="no-highlight">42</i>&nbsp;		
+<b class="nc"><i class="no-highlight">43</i>&nbsp;		smartwatches.put(1L, watch1);</b>
+<b class="nc"><i class="no-highlight">44</i>&nbsp;		smartwatches.put(2L, watch2);</b>
+<b class="nc"><i class="no-highlight">45</i>&nbsp;    	smartwatches.put(3L, watch3);</b>
+<i class="no-highlight">46</i>&nbsp;    }
+<i class="no-highlight">47</i>&nbsp;
+<i class="no-highlight">48</i>&nbsp;    @Override
+<i class="no-highlight">49</i>&nbsp;    public Integer count() {
+<b class="nc"><i class="no-highlight">50</i>&nbsp;        return smartwatches.keySet().size();</b>
+<i class="no-highlight">51</i>&nbsp;    }
+<i class="no-highlight">52</i>&nbsp;
+<i class="no-highlight">53</i>&nbsp;    @Override
+<i class="no-highlight">54</i>&nbsp;    public List&lt;SmartWatch&gt; findAll() {
+<b class="nc"><i class="no-highlight">55</i>&nbsp;        return new ArrayList&lt;&gt;(smartwatches.values());</b>
+<i class="no-highlight">56</i>&nbsp;    }
+<i class="no-highlight">57</i>&nbsp;
+<i class="no-highlight">58</i>&nbsp;    @Override
+<i class="no-highlight">59</i>&nbsp;    public SmartWatch findOne(Long id) {
+<b class="nc"><i class="no-highlight">60</i>&nbsp;        return smartwatches.get(id);</b>
+<i class="no-highlight">61</i>&nbsp;    }
+<i class="no-highlight">62</i>&nbsp;
+<i class="no-highlight">63</i>&nbsp;    @Override
+<i class="no-highlight">64</i>&nbsp;    public SmartWatch save(SmartWatch smartwatch) {
+<i class="no-highlight">65</i>&nbsp;
+<b class="nc"><i class="no-highlight">66</i>&nbsp;        if (smartwatch.getId() == null || smartwatch.getId() == 0L) // nuevo smartphone</b>
+<b class="nc"><i class="no-highlight">67</i>&nbsp;            smartwatch.setId(getMaxSmartWatchId() + 1);</b>
+<i class="no-highlight">68</i>&nbsp;
+<b class="nc"><i class="no-highlight">69</i>&nbsp;        smartwatches.remove(smartwatch.getId()); // en caso de que ya exista lo quita para actualizarlo</b>
+<i class="no-highlight">70</i>&nbsp;
+<b class="nc"><i class="no-highlight">71</i>&nbsp;        smartwatches.put(smartwatch.getId(), smartwatch);</b>
+<b class="nc"><i class="no-highlight">72</i>&nbsp;        return smartwatch;</b>
+<i class="no-highlight">73</i>&nbsp;    }
+<i class="no-highlight">74</i>&nbsp;
+<i class="no-highlight">75</i>&nbsp;    private Long getMaxSmartWatchId() {
+<b class="nc"><i class="no-highlight">76</i>&nbsp;        return Collections.max(smartwatches.entrySet(),</b>
+<b class="nc"><i class="no-highlight">77</i>&nbsp;                (entry1, entry2) -&gt; (int) (entry1.getKey() - entry2.getKey())</b>
+<b class="nc"><i class="no-highlight">78</i>&nbsp;        ).getKey();</b>
+<i class="no-highlight">79</i>&nbsp;    }
+<i class="no-highlight">80</i>&nbsp;
+<i class="no-highlight">81</i>&nbsp;    @Override
+<i class="no-highlight">82</i>&nbsp;    public boolean delete(Long id) {
+<b class="nc"><i class="no-highlight">83</i>&nbsp;        if (id == null || !smartwatches.containsKey(id))</b>
+<b class="nc"><i class="no-highlight">84</i>&nbsp;            return false;</b>
+<b class="nc"><i class="no-highlight">85</i>&nbsp;        smartwatches.remove(id);</b>
+<b class="nc"><i class="no-highlight">86</i>&nbsp;        return true;</b>
+<i class="no-highlight">87</i>&nbsp;    }
+<i class="no-highlight">88</i>&nbsp;
+<i class="no-highlight">89</i>&nbsp;    @Override
+<i class="no-highlight">90</i>&nbsp;    public void deleteAll() {
+<b class="nc"><i class="no-highlight">91</i>&nbsp;        if (!smartwatches.isEmpty())</b>
+<b class="nc"><i class="no-highlight">92</i>&nbsp;            smartwatches.clear();</b>
+<i class="no-highlight">93</i>&nbsp;    }
+<i class="no-highlight">94</i>&nbsp;}
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2022-02-23 12:20</div>
+</div>
+</body>
+</html>

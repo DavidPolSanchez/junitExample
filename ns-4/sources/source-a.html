@@ -1,0 +1,102 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > SmartPhoneService</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.example.demo.service</a>
+</div>
+
+<h1>Coverage Summary for Class: SmartPhoneService (com.example.demo.service)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+</tr>
+<tr>
+  <td class="name">SmartPhoneService</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.example.demo.service;
+<i class="no-highlight">2</i>&nbsp;
+<i class="no-highlight">3</i>&nbsp;import com.example.demo.domain.SmartPhone;
+<i class="no-highlight">4</i>&nbsp;
+<i class="no-highlight">5</i>&nbsp;import java.util.List;
+<i class="no-highlight">6</i>&nbsp;import java.util.Optional;
+<i class="no-highlight">7</i>&nbsp;
+<i class="no-highlight">8</i>&nbsp;public interface SmartPhoneService {
+<i class="no-highlight">9</i>&nbsp;
+<i class="no-highlight">10</i>&nbsp;	/**
+<i class="no-highlight">11</i>&nbsp;	 * It returns total number of smartphones
+<i class="no-highlight">12</i>&nbsp;	 * @return
+<i class="no-highlight">13</i>&nbsp;	 */
+<i class="no-highlight">14</i>&nbsp;    Integer count();
+<i class="no-highlight">15</i>&nbsp;
+<i class="no-highlight">16</i>&nbsp;    /**
+<i class="no-highlight">17</i>&nbsp;     * It retrieves all smartphones
+<i class="no-highlight">18</i>&nbsp;     */
+<i class="no-highlight">19</i>&nbsp;    List&lt;SmartPhone&gt; findAll();
+<i class="no-highlight">20</i>&nbsp;
+<i class="no-highlight">21</i>&nbsp;    Optional&lt;SmartPhone&gt; findOne(Long id);
+<i class="no-highlight">22</i>&nbsp;    
+<i class="no-highlight">23</i>&nbsp;    // Filtros
+<i class="no-highlight">24</i>&nbsp;     List&lt;SmartPhone&gt; findByWifi(Boolean wifi);
+<i class="no-highlight">25</i>&nbsp;     
+<i class="no-highlight">26</i>&nbsp;    // List&lt;SmartPhone&gt; findByManufacturer(String manufacturer);
+<i class="no-highlight">27</i>&nbsp;
+<i class="no-highlight">28</i>&nbsp;    SmartPhone save(SmartPhone smartphone);
+<i class="no-highlight">29</i>&nbsp;
+<i class="no-highlight">30</i>&nbsp;    boolean delete(Long id);
+<i class="no-highlight">31</i>&nbsp;
+<i class="no-highlight">32</i>&nbsp;    void deleteAll();
+<i class="no-highlight">33</i>&nbsp;}
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2022-02-23 12:20</div>
+</div>
+</body>
+</html>

@@ -1,5 +1,6 @@
 package com.example;
 
+import com.example.demo.service.CalculatorService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -29,6 +30,6 @@ class CalculatorServiceTest {
     @DisplayName("Suma negativa es igual a 0")
     void sumNegativeTest() {
         int actual = calculator.sum(-5, 0);
-        assertEquals(0, actual);
+        assertEquals(5, actual);
     }
 }
