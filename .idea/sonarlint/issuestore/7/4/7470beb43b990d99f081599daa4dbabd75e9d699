@@ -1,0 +1,12 @@
+
+N	java:S106"9Replace this use of System.out or System.err by a logger.(èªí‰
+Q	java:S1259"<This block of commented-out lines of code should be removed.(Ù»Î‡
+Q	java:S125g"<This block of commented-out lines of code should be removed.(óƒ²µ
+Q	java:S125v"<This block of commented-out lines of code should be removed.(ÀÞþÏ
+V	java:S125y"<This block of commented-out lines of code should be removed.(ï˜† ÿÿÿÿÿ
+Q	java:S125}"<This block of commented-out lines of code should be removed.(Æ•Ž¨
+W	java:S125‚"<This block of commented-out lines of code should be removed.(èý€…üÿÿÿÿ
+W	java:S125Œ"<This block of commented-out lines of code should be removed.(ËðÁÙûÿÿÿÿ
+K
+java:S1128
+"0Remove this unused import 'java.util.Map.Entry'.(±þê¾úÿÿÿÿ
